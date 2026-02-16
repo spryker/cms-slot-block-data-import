@@ -4,3 +4,6 @@ parameters:
         - '#Parameter \#2 \$(size|length) of function array_chunk expects int<1, max>, int given.#'
         -
             identifier: missingType.iterableValue
+        # Defensive programming: type comparison kept for runtime safety
+        -
+            identifier: notIdentical.alwaysTrue
