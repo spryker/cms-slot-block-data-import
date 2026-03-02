@@ -21,11 +21,6 @@ class CmsBlockKeyToCmsBlockIdStep implements DataImportStepInterface
      */
     protected $idCmsBlockBuffer = [];
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $dataSet[CmsSlotBlockDataSetInterface::COL_BLOCK_ID] = $this->getIdCmsBlockByKey(

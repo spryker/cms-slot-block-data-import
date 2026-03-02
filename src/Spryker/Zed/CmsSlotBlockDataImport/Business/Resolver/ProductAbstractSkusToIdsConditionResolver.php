@@ -27,12 +27,6 @@ class ProductAbstractSkusToIdsConditionResolver implements ConditionResolverInte
      */
     protected $productAbstractIdsBuffer = [];
 
-    /**
-     * @param string $conditionValue
-     * @param array $conditionsArray
-     *
-     * @return array
-     */
     public function getConditions(string $conditionValue, array $conditionsArray = []): array
     {
         $productAbstractSkus = $conditionValue ? explode(',', $conditionValue) : [];

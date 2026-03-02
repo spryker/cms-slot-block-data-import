@@ -22,19 +22,11 @@ class CmsSlotBlockWriterStep extends PublishAwareStep implements DataImportStepI
      */
     protected $utilEncodingService;
 
-    /**
-     * @param \Spryker\Zed\DataImport\Dependency\Service\DataImportToUtilEncodingServiceInterface $utilEncodingService
-     */
     public function __construct(DataImportToUtilEncodingServiceInterface $utilEncodingService)
     {
         $this->utilEncodingService = $utilEncodingService;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $cmsSlotBlockEntity = SpyCmsSlotBlockQuery::create()

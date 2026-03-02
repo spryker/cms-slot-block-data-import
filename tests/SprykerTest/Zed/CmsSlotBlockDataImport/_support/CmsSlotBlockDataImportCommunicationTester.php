@@ -36,11 +36,6 @@ class CmsSlotBlockDataImportCommunicationTester extends Actor
 {
     use _generated\CmsSlotBlockDataImportCommunicationTesterActions;
 
-    /**
-     * @param string $fileName
-     *
-     * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
-     */
     public function createDataImporterConfigurationTransfer(string $fileName): DataImporterConfigurationTransfer
     {
         $dataImporterReaderConfigurationTransfer = new DataImporterReaderConfigurationTransfer();
@@ -53,12 +48,6 @@ class CmsSlotBlockDataImportCommunicationTester extends Actor
         return $dataImportConfigurationTransfer;
     }
 
-    /**
-     * @param int $idCmsSlotTemplate
-     * @param int $idCmsSlot
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockTransfer|null
-     */
     public function findCmsSlotBlock(int $idCmsSlotTemplate, int $idCmsSlot): ?CmsSlotBlockTransfer
     {
         $cmsSlotBlockEntity = SpyCmsSlotBlockQuery::create()
@@ -129,11 +118,6 @@ class CmsSlotBlockDataImportCommunicationTester extends Actor
         return $conditions;
     }
 
-    /**
-     * @param string $key
-     *
-     * @return void
-     */
     public function removeCmsBlockByKey(string $key): void
     {
         SpyCmsBlockQuery::create()->filterByKey($key)->delete();

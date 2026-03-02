@@ -22,12 +22,6 @@ class CmsPageKeysToIdsConditionResolver implements ConditionResolverInterface
      */
     protected $cmsPageIdsBuffer = [];
 
-    /**
-     * @param string $conditionValue
-     * @param array $conditionsArray
-     *
-     * @return array
-     */
     public function getConditions(string $conditionValue, array $conditionsArray = []): array
     {
         $cmsPageKeys = $conditionValue ? explode(',', $conditionValue) : [];

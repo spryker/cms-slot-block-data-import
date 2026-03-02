@@ -22,12 +22,6 @@ class CategoryKeysToIdsConditionResolver implements ConditionResolverInterface
      */
     protected $categoryIdsBuffer = [];
 
-    /**
-     * @param string $conditionValue
-     * @param array $conditionsArray
-     *
-     * @return array
-     */
     public function getConditions(string $conditionValue, array $conditionsArray = []): array
     {
         $categoryKeys = $conditionValue ? explode(',', $conditionValue) : [];

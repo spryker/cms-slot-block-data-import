@@ -21,11 +21,6 @@ class CmsSlotKeyToCmsSlotIdStep implements DataImportStepInterface
      */
     protected $idCmsSlotBuffer = [];
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $dataSet[CmsSlotBlockDataSetInterface::COL_SLOT_ID] = $this->getIdCmsSlotByKey(

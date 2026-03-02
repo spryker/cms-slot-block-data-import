@@ -14,12 +14,6 @@ class AllConditionResolver implements ConditionResolverInterface
      */
     protected const KEY_ALL = 'all';
 
-    /**
-     * @param string $conditionValue
-     * @param array $conditionsArray
-     *
-     * @return array
-     */
     public function getConditions(string $conditionValue, array $conditionsArray = []): array
     {
         if ($conditionValue === '') {

@@ -29,9 +29,6 @@ class CmsSlotBlockDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration($moduleDataImportDirectory . 'cms_slot_block.csv', static::IMPORT_TYPE_CMS_SLOT_BLOCK);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

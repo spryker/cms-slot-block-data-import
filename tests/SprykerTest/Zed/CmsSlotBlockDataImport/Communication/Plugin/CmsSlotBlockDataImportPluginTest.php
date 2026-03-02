@@ -70,9 +70,6 @@ class CmsSlotBlockDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -83,9 +80,6 @@ class CmsSlotBlockDataImportPluginTest extends Unit
         $this->tester->removeCmsBlockByKey(static::CMS_BLOCK_KEY);
     }
 
-    /**
-     * @return void
-     */
     public function testCmsSlotBlockDataImportThrowsExceptionWhenSlotTemplateDoesNotExist(): void
     {
         // Arrange
@@ -105,9 +99,6 @@ class CmsSlotBlockDataImportPluginTest extends Unit
         (new CmsSlotBlockDataImportPlugin())->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testCmsSlotBlockDataImportThrowsExceptionWhenSlotDoesNotExist(): void
     {
         // Arrange
@@ -124,9 +115,6 @@ class CmsSlotBlockDataImportPluginTest extends Unit
         (new CmsSlotBlockDataImportPlugin())->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testCmsSlotBlockDataImportThrowsExceptionWhenBlockDoesNotExist(): void
     {
         // Arrange
@@ -146,9 +134,6 @@ class CmsSlotBlockDataImportPluginTest extends Unit
         (new CmsSlotBlockDataImportPlugin())->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testCmsSlotBlockDataImportPopulatesTableWhenDataIsCorrect(): void
     {
         // Arrange
@@ -179,9 +164,6 @@ class CmsSlotBlockDataImportPluginTest extends Unit
         $this->assertEquals($cmsSlotBlockConditions, $cmsSlotBlockTransferFromDb->getConditions());
     }
 
-    /**
-     * @return void
-     */
     public function testCmsSlotBlockDataImportPopulatesTableWithEmptyConditionsWhenThereAreNoConditionsInCsv(): void
     {
         // Arrange

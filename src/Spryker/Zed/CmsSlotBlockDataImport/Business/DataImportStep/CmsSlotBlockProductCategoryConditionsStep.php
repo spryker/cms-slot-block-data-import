@@ -55,11 +55,6 @@ class CmsSlotBlockProductCategoryConditionsStep implements DataImportStepInterfa
      */
     protected $categoryKeysToIdsConditionsResolver;
 
-    /**
-     * @param \Spryker\Zed\CmsSlotBlockDataImport\Business\Resolver\ConditionResolverInterface $allConditionsResolver
-     * @param \Spryker\Zed\CmsSlotBlockDataImport\Business\Resolver\ConditionResolverInterface $productAbstractSkusToIdsConditionsResolver
-     * @param \Spryker\Zed\CmsSlotBlockDataImport\Business\Resolver\ConditionResolverInterface $categoryKeysToIdsConditionsResolver
-     */
     public function __construct(
         ConditionResolverInterface $allConditionsResolver,
         ConditionResolverInterface $productAbstractSkusToIdsConditionsResolver,
@@ -70,11 +65,6 @@ class CmsSlotBlockProductCategoryConditionsStep implements DataImportStepInterfa
         $this->categoryKeysToIdsConditionsResolver = $categoryKeysToIdsConditionsResolver;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $conditionsArray = $dataSet[CmsSlotBlockDataSetInterface::COL_CONDITIONS_ARRAY] ?? [];
