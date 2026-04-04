@@ -18,6 +18,7 @@ suites:
             enabled:
                 - \SprykerTest\Shared\Testify\Helper\Environment
                 - \SprykerTest\Shared\Testify\Helper\LocatorHelper
+                - \SprykerTest\Shared\Testify\Helper\DependencyHelper
                 - \SprykerTest\Zed\CmsBlock\Helper\CmsBlockDataHelper
                 - \SprykerTest\Zed\CmsSlot\Helper\CmsSlotHelper
                 - \SprykerTest\Zed\CmsSlotBlock\Helper\CmsSlotBlockHelper
